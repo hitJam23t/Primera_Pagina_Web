@@ -1,33 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-    <title>Mi Primera Página Web</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        p {
-            color: #666;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Datos CAS</title>
+  <link rel="stylesheet" href="decorar.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Bienvenido a Mi Página Web</h1>
-        <p>¡Hola! Esta es una página web de ejemplo.</p>
-        <p>Puedes personalizar este contenido y agregar más secciones según tus necesidades.</p>
-    </div>
+  <h1>Listado de Centro de Servicios y Teléfonos</h1>
+
+  <form id="formulario">
+    <label for="palS">Código:</label>
+    <input type="password" id="palS" name="palS">
+    <button type="button" onclick="virP()">Enviar</button>
+    <p id="error" style="display: none;">El codigo es incorrecto. Por favor, inténtalo nuevamente.</p>
+  </form>
+
+  <div id="contenido">
+    <table>
+        <thead>
+          <tr>
+            <th>Marca o Proveedor</th>
+            <th>Nombre del Centro de Servicio, Teléfono, Direcciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HP(Canalizar cliente al telefono HP; Revisar proceso DOA de Mayoristas)</td>
+            <td>5550912455; No se tiene garantía en consumibles al cliente se le debe proporcionar el teléfono para reclamar la garantía</td>
+          </tr>
+          <tr>
+            <td>CANON, EPSON (revisar proceso DOA), TRIPPLITE, BROTHER (Revisar proceso DOA), TOSHIBA</td>
+            <td>Ingenieria En Mantenimiento Y Sistemas Del Golfo, S.A. De C.V. Teléfono: 993 312 60 04; 9933 12 97 13, servicio@imsgdelgolfo.com.mx; Av. Gregorio Méndez #1500-B, Fracc. Lidia Esther, Villahermosa</td>
+          </tr>
+          <tr>
+            <td>GHIA (Garantía directo con el Centro de Servicio)</td>
+            <td>CVA VILLAHERMOSA (Comercializadora de Valor Agregado) Domicilio: AV PERIFERICO CARLOS PELLICER CAMARA, No. 710, PRIMERO DE MAYO; Teléfono: (993) 3543 950</td>
+          </tr>
+          <tr>
+            <td>BROTHER (Garantía directo con el centro de servicio)</td>
+            <td>8007596000</td>
+          </tr>
+          <tr>
+            <td>ACER (Garantía directo con el centro de servicio)</td>
+            <td>TEL. 800-461-2237; Reportar por teléfono para obtener una orden de servicio</td>
+          </tr>
+          <tr>
+            <td>Master Choice/Perfect Choice/EasyLine</td>
+            <td>8001481828, enviar correo, registrar RMA https://docs.google.com/forms/d/e/1FAIpQLSesg-UjXyi4sW59oBp-zrcWODGjCGaG0zZKsy7VCpKQeSWHIQ/viewform?gxids=7628 Rodrigo Huerta Gomez <rodrigo.hg@perfectchoice.me> <soporte@perfectchoice.me> <idelgadillo@perfectchoice.me><yesika.ac@perfectchoice.me></td>
+          </tr>
+          <tr>
+            <td>MIRAGE (Directo con el centro de servicio)</td>
+            <td>Cliente final levanta reporte en el link https://mirage.mx/soporte/ rellenando el formulario o al número whatsapp: 3319304625 Telefonos escalación tienda 6444109800 EXT. 2139 Cristina Ruiz , cristinar@airesmirage.com y Leonor Cardenas, leonorc@airesmirage.com, 9933501884 CAS Local Servicios Epsilon; NOTA: Para efectos de garantías el cliente debe instalar el equipo con un centro de servicio autorizado, en caso de instalarlo de manera particular la revisión es con costo y si la garantía procede Mirage manda las refacciones pero el costo de mano de obra de la instalación de refacción lo adsorbe el cliente.</td>
+          </tr>
+          <tr>
+            <td>GBC/ACCO</td>
+            <td>Escalar ticket a compras, línea papelería en los primeros días de compra, para garantías de cliente FINAL proporcionar número ACCO Mexicana | Tel. Conmutador 55 1500-5700 Servicio técnico ext. 5778, 5704 o 6514.</td>
+          </tr>
+          <tr>
+            <td>IMGRAM MICRO</td>
+            <td>TEL. 55 53189900 X89883 y 89887</td>
+          </tr>
+          <tr>
+            <td>Código de cliente MABE ALM30</td>
+            <td>ID 110234958: Garantías tienda, TEL. 014614717000 / Garanplus 5554887269</td>
+          </tr>
+          <tr>
+            <td>Obtener folios Kingston para Ingram</td>
+            <td>TEL. 8000219695</td>
+          </tr>
+          <tr>
+            <td>Koblenz local</td>
+            <td>TEL. 9933557218 de 9 a.m a 5 p.m</td>
+          </tr>
+          <tr>
+            <td>Exel del Norte</td>
+            <td>TEL.2299811920 contactos garantias: para: Gerardo Zamora Lugo <vr.ventas2@exel.com.mx>, Juan Rogelio Rodriguez Leal <juan.rodriguez@exel.com.mx> Isaac Munoz Chavez <isaac.munoz@exel.com.mx>, VR Jefe de Almacen <VR.JefeAlmacen@exel.com.mx>, Almacen VR <almacen.veracruz@exel.com.mx>,</td>
+          </tr>
+          <tr>
+            <td>Lenovo</td>
+            <td>Lenovo Mexico, corp. 5550008500 LENOVO SOPORTE 8002833181</td>
+          </tr>
+          <tr>
+            <td>IOTZONE/ TechZone</td>
+            <td>Enviar correo: Mileiny Contreras <mcontreras@ginga.com.mx> Pool Nolasco <pnolasco@ginga.com.mx>, Carolina Garcia <cgarcia@ginga.com.mx>, Jhordy Salinas <jsalinas@ginga.com.mx> 01 772 719 0367 ext 107 01 800 022 2509</td>
+          </tr>
+          <tr>
+            <td>NEXTEP/Exel del Norte</td>
+            <td>Eviar correo :Juan Rogelio Rodriguez Leal <juan.rodriguez@exel.com.mx> Gerardo Zamora Lugo <vr.ventas2@exel.com.mx>, Isaac Munoz Chavez <isaac.munoz@exel.com.mx></td>
+          </tr>
+          <tr>
+            <td>HYPERMARK /Enfriadores</td>
+            <td>tel. 55 5384 0353,55 50444140 para reportar fallas o recibir asesoria del manejo; correos de reporte: ventas2@hypermark.com.mx; multialmacenn@hypermark.com.mx</td>
+          </tr>
+          <tr>
+            <td>Katun</td>
+            <td>USER: GARANTIASOFIX CONTRASEÑA: 3W3EPW Link de registro de garantía https://www.katun.com/kolc/Login.jsp?u=130901</td>
+          </tr>
+          <tr>
+            <td>Steren</td>
+            <td>Enviar correo con soportes a: David Gonzalez <david.gonzalez@steren.com.mx>; Guadalupe Villa <gvilla@steren.com.mx>; Rosalia Perez <rosalia.perez@steren.com.mx>; Asistente Linea Electronica <asistelectronica@ofix.mx></td>
+          </tr>
+          <tr>
+            <td>Sansui</td>
+            <td>La garantía se reporta DIRECTO a la marca SANSUI (no al mayorista,) a los siguientes correos: operaciones@wsla.mx; rtapla@ctmdigital.mx y por whatsapp al 7229028319 nota: en garantía realizada alm30 el CAS tardo más del mes en espera de refacción , se escalo orden de servicio a compras y compras escalo al mayorista Imgram que escalo el caso a SANSUI que termino enviando un cambio físico a la tienda.</td>
+          </tr>
+          <tr>
+            <td>Vorago</td>
+            <td>TEL. 3330446666 EXT. 5000</td>
+          </tr>
+          <tr>
+            <td>Billboard</td>
+            <td>STUFFACTORY S.A. DE C.V. ; leslie@stuffactory.mx ; soporte@stuffactory.mx contacto : LESLIE GUADALUPE DÁVILA TEL .33 3615 0392 EXT 233 ; 3327853426</td>
+          </tr>
+          <tr>
+            <td>DELL Mexico</td>
+            <td>5550818800, localiza el centro serivico -->> https://www.dell.com/support/home/es-mx/servicecenter</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+  <script src="passwd.js"></script>
 </body>
+
 </html>
